@@ -1144,11 +1144,11 @@ H5SeuratToH5AD <- function(
     dname = 'obs',
     index = seq.default(from = 1, to = length(x = Cells(x = source)))
   )
-  dfile[['obs']]$create_dataset(
-    name = rownames,
-    robj = Cells(x = source),
-    dtype = GuessDType(x = Cells(x = source))
-  )
+  #dfile[['obs']]$create_dataset(
+  #  name = rownames,
+  #  robj = Cells(x = source),
+  #  dtype = GuessDType(x = Cells(x = source))
+  #)
   dfile[['obs']]$create_attr(
     attr_name = rownames,
     robj = rownames,
